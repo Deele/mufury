@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mu Fury - Full Mu Online Season 4 Private Server</title>
+		<link rel="stylesheet" href="/css/main.css">
+	</head>
+	<body>
+		<section class="page">
+			<div class="page__plax-shell visible-md-block visible-lg-block">
+				<div class="page__plax-layer page__plax-layer_type1"></div>
+				<div class="page__plax-layer page__plax-layer_type2"></div>
+			</div>
+			<header class="page__header">
+				<div class="container">
+					<nav class="main-menu" role="navigation">
+						<div class="main-menu__inner main-menu__inner_type1 visible-md-block visible-lg-block">
+							<ul class="main-menu__col main-menu__col_left"><li class="main-menu__item main-menu__item_type-1"><a href="#"><span class="label sr-only">Home</span></a></li><li class="main-menu__item main-menu__item_type-2"><a href="#"><span class="label sr-only">Register</span></a></li></ul>
+							<div class="main-menu__col main-menu__col_mid"><a href="/" class="main-menu__logo" title="MU Fury Season 4"><span class="label sr-only">MU Fury Season 4</span></a></div>
+							<ul class="main-menu__col main-menu__col_right"><li class="main-menu__item main-menu__item_type-3"><a href="#"><span class="label sr-only">Downloads</span></a></li><li class="main-menu__item main-menu__item_type-4"><a href="#"><span class="label sr-only">Forum</span></a></li></ul>
+						</div>
+						<div class="main-menu__inner main-menu__inner_type2 visible-xs-block visible-sm-block">
+							<div class="navbar navbar-inverse">
+								<div class="container-fluid">
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+										<a class="navbar-brand" href="#">MU Fury Season 4</a>
+									</div>
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+										<ul class="nav navbar-nav">
+											<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+											<li><a href="#">Register</a></li>
+											<li><a href="#">Downloads</a></li>
+											<li><a href="#">Forum</a></li>
+										</ul>
+									</div><!-- /.navbar-collapse -->
+								</div><!-- /.container-fluid -->
+							</div>
+						</div>
+					</nav>
+				</div>
+				<h1 class="sr-only">Home</h1>
+			</header>
+			<main class="page__main">
+				<div class="container">
+					<div class="col-md-3 col-md-offset-1">
+						<section class="widget widget_server-status">
+							<div class="status__display status__display_online"></div>
+							<div class="status__text">
+								<h2>Server status<span class="sr-only">: On</span></h2>
+								<p>Players online: 200</p>
+							</div>
+						</section>
+						<section class="sub-menu-block sub-menu-block_type1">
+							<section class="widget widget_navigation">
+								<div class="widget__inner">
+									<h2>Navigation</h2>
+								</div>
+							</section>
+							<section class="widget widget_top">
+								<div class="widget__inner">
+									<h2>Top players</h2>
+								</div>
+							</section>
+						</section>
+					</div>
+					<div class="col-md-4">
+						<section class="widget widget_hero-btn">
+							<a href="#"><span class="sr-only">Play now</span></a>
+						</section>
+						<section class="widget widget_news">
+							<div class="widget__inner">
+								<h2>Latest news</h2>
+							</div>
+						</section>
+					</div>
+					<div class="col-md-3">
+						<section class="widget widget_community">
+							<div class="widget__inner">
+								<h2 class="sr-only">Community</h2>
+							</div>
+						</section>
+						<section class="sub-menu-block sub-menu-block_type2">
+							<section class="widget widget_members">
+								<div class="widget__inner">
+									<h2>Member area</h2>
+								</div>
+							</section>
+							<section class="widget widget_forum-posts">
+								<div class="widget__inner">
+									<h2>Latest forum posts</h2>
+								</div>
+							</section>
+						</section>
+					</div>
+				</div>
+				<div class="page__main-deco-footer"></div>
+			</main>
+			<footer class="page__footer">
+				<p>MU Fury Season 4 &copy; 2015, Aigars R.</p>
+			</footer>
+		</section>
+		<script src="/vendor/jquery/dist/jquery.js"></script>
+		<script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="/vendor/plax/js/plax.js"></script>
+		<script>
+			function setupPlax() {
+				var plaxShell = $('.page__plax-shell');
+				if (!plaxShell.is(':hidden')) {
+					var layer1offset = 20,
+							layer1 = plaxShell.find('.page__plax-layer_type1'),
+							layer2offset = 60,
+							layer2 = plaxShell.find('.page__plax-layer_type2'),
+							wWidth = $(window).width(),
+							wHeight = $(window).height();
+					$('body').css('background-image', 'none');
+					$('.page').css('background-image', 'none');
+					layer1.attr('style', '');
+					layer1.show();
+					layer1.css({
+						"left": 0 - layer1offset,
+						"width": wWidth + layer1offset,
+						"top": 0 - layer1offset,
+						"height": wHeight + layer1offset
+					});
+					layer1.plaxify({
+						"xRange":layer1offset,
+						"yRange":layer1offset
+					});
+					layer2.attr('style', '');
+					layer2.show();
+					var layer2Width = layer2.width();
+					if (layer2Width > wWidth) {
+						layer2.css('left', 0 - ((layer2Width - wWidth) / 2));
+					}
+					else {
+						layer2.css('left', ((wWidth - layer2Width) / 2));
+					}
+					layer2.plaxify({
+						"xRange":layer2offset,
+						"yRange":layer2offset
+					});
+					$.plax.enable();
+				}
+				else {
+					$('body').css('background-image', '');
+					$('.page').css('background-image', '');
+				}
+			}
+			$(document).ready(function () {
+				$(window).resize(function() {
+					setupPlax();
+				});
+				setupPlax();
+			});
+		</script>
+	</body>
+</html>

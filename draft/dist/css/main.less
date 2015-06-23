@@ -1,0 +1,133 @@
+@import "bootstrap";
+
+body {
+	background: #000000 url('/img/background-pattern.jpg') repeat fixed;
+}
+.page {
+	position: relative;
+	background: url('/img/background-characters.png') no-repeat center top;
+	min-height: 945px;
+	.page__plax {
+		&-shell {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+		&-layer {
+			display: none;
+			position: absolute;
+			&_type1 {
+				width: 100%;
+				height: 100%;
+				background: url('/img/background-pattern.jpg') repeat;
+			}
+			&_type2 {
+				width: 1590px;
+				height: 945px;
+				background: url('/img/background-characters.png') no-repeat center top;
+			}
+		}
+	}
+}
+.main-menu {
+	.main-menu__inner {
+		&_type1 {
+			width: 970px;
+			height: 237px;
+			background: url('/img/navbar-background.png') no-repeat center top;
+			background-size: cover;
+			position: relative;
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+				width: 720px;
+			}
+			@media (min-width: @screen-lg-min) {
+				margin: 0 85px;
+			}
+			.main-menu {
+				position: relative;
+				&__col {
+					vertical-align: top;
+					display: block;
+					position: absolute;
+					padding: 0;
+					margin: 0;
+					&_left {
+						left: 103px;
+						@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+							left: 0;
+						}
+					}
+					&_mid {
+						top: 38px;
+						left: 258px;
+						@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+							left: 155px;
+						}
+						.main-menu__logo {
+							width: 433px;
+							height: 164px;
+							display: block;
+							background: url('/img/logo.png') no-repeat center top;
+						}
+					}
+					&_right {
+						left: 675px;
+					}
+				}
+				&__item {
+					margin-top: 94px;
+					display: inline-block;
+					a {
+						display: block;
+						height: 55px;
+						background: url('/img/menu-text.png') no-repeat;
+					}
+					&_type {
+						&-1 {
+							width: 70px;
+							a {
+								background-position: -10px -3px;
+								&:hover {
+									background-position: -9px -148px;
+								}
+							}
+						}
+						&-2 {
+							width: 95px;
+							a {
+								background-position: -85px -3px;
+								&:hover {
+									background-position: -84px -148px;
+								}
+							}
+						}
+						&-3 {
+							width: 126px;
+							a {
+								background-position: -175px -3px;
+								&:hover {
+									background-position: -175px -148px;
+								}
+							}
+						}
+						&-4 {
+							width: 80px;
+							a {
+								background-position: -300px -3px;
+								&:hover {
+									background-position: -300px -148px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.page__footer {
+	text-align: center;
+	color: #3932f8;
+}
