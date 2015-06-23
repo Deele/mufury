@@ -1,0 +1,16 @@
+{
+  "name": "mufury",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "runtime",
+    "bower.json",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "jquery": "~2.1.4",
+    "cameronmcefee/plax": "*"
+  }
+}
