@@ -1,165 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Mu Fury - Full Mu Online Season 4 Private Server</title>
-		<link rel="stylesheet" href="/css/main.css">
-	</head>
-	<body>
-		<section class="page">
-			<div class="page__plax-shell visible-md-block visible-lg-block">
-				<div class="page__plax-layer page__plax-layer_type1"></div>
-				<div class="page__plax-layer page__plax-layer_type2"></div>
-			</div>
-			<header class="page__header">
-				<div class="container">
-					<nav class="main-menu" role="navigation">
-						<div class="main-menu__inner main-menu__inner_type1 visible-md-block visible-lg-block">
-							<ul class="main-menu__col main-menu__col_left"><li class="main-menu__item main-menu__item_type-1"><a href="#"><span class="label sr-only">Home</span></a></li><li class="main-menu__item main-menu__item_type-2"><a href="#"><span class="label sr-only">Register</span></a></li></ul>
-							<div class="main-menu__col main-menu__col_mid"><a href="/" class="main-menu__logo" title="MU Fury Season 4"><span class="label sr-only">MU Fury Season 4</span></a></div>
-							<ul class="main-menu__col main-menu__col_right"><li class="main-menu__item main-menu__item_type-3"><a href="#"><span class="label sr-only">Downloads</span></a></li><li class="main-menu__item main-menu__item_type-4"><a href="#"><span class="label sr-only">Forum</span></a></li></ul>
-						</div>
-						<div class="main-menu__inner main-menu__inner_type2 visible-xs-block visible-sm-block">
-							<div class="navbar navbar-inverse">
-								<div class="container-fluid">
-									<div class="navbar-header">
-										<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-											<span class="sr-only">Toggle navigation</span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-										<a class="navbar-brand" href="#">MU Fury Season 4</a>
-									</div>
-									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-										<ul class="nav navbar-nav">
-											<li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-											<li><a href="#">Register</a></li>
-											<li><a href="#">Downloads</a></li>
-											<li><a href="#">Forum</a></li>
-										</ul>
-									</div><!-- /.navbar-collapse -->
-								</div><!-- /.container-fluid -->
-							</div>
-						</div>
-					</nav>
-				</div>
-				<h1 class="sr-only">Home</h1>
-			</header>
-			<main class="page__main">
-				<div class="container">
-					<div class="col-md-3 col-md-offset-1">
-						<section class="widget widget_server-status">
-							<div class="status__display status__display_online"></div>
-							<div class="status__text">
-								<h2>Server status<span class="sr-only">: On</span></h2>
-								<p>Players online: 200</p>
-							</div>
-						</section>
-						<section class="sub-menu-block sub-menu-block_type1">
-							<section class="widget widget_navigation">
-								<div class="widget__inner">
-									<h2>Navigation</h2>
-								</div>
-							</section>
-							<section class="widget widget_top">
-								<div class="widget__inner">
-									<h2>Top players</h2>
-								</div>
-							</section>
-						</section>
-					</div>
-					<div class="col-md-4">
-						<section class="widget widget_hero-btn">
-							<a href="#"><span class="sr-only">Play now</span></a>
-						</section>
-						<section class="widget widget_news">
-							<div class="widget__inner">
-								<h2>Latest news</h2>
-							</div>
-						</section>
-					</div>
-					<div class="col-md-3">
-						<section class="widget widget_community">
-							<div class="widget__inner">
-								<h2 class="sr-only">Community</h2>
-							</div>
-						</section>
-						<section class="sub-menu-block sub-menu-block_type2">
-							<section class="widget widget_members">
-								<div class="widget__inner">
-									<h2>Member area</h2>
-								</div>
-							</section>
-							<section class="widget widget_forum-posts">
-								<div class="widget__inner">
-									<h2>Latest forum posts</h2>
-								</div>
-							</section>
-						</section>
-					</div>
-				</div>
-				<div class="page__main-deco-footer"></div>
-			</main>
-			<footer class="page__footer">
-				<p>MU Fury Season 4 &copy; 2015, Aigars R.</p>
-			</footer>
-		</section>
-		<script src="/vendor/jquery/dist/jquery.js"></script>
-		<script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
-		<script src="/vendor/plax/js/plax.js"></script>
-		<script>
-			function setupPlax() {
-				var plaxShell = $('.page__plax-shell');
-				if (!plaxShell.is(':hidden')) {
-					var layer1offset = 20,
-							layer1 = plaxShell.find('.page__plax-layer_type1'),
-							layer2offset = 60,
-							layer2 = plaxShell.find('.page__plax-layer_type2'),
-							wWidth = $(window).width(),
-							wHeight = $(window).height();
-					$('body').css('background-image', 'none');
-					$('.page').css('background-image', 'none');
-					layer1.attr('style', '');
-					layer1.show();
-					layer1.css({
-						"left": 0 - layer1offset,
-						"width": wWidth + layer1offset,
-						"top": 0 - layer1offset,
-						"height": wHeight + layer1offset
-					});
-					layer1.plaxify({
-						"xRange":layer1offset,
-						"yRange":layer1offset
-					});
-					layer2.attr('style', '');
-					layer2.show();
-					var layer2Width = layer2.width();
-					if (layer2Width > wWidth) {
-						layer2.css('left', 0 - ((layer2Width - wWidth) / 2));
-					}
-					else {
-						layer2.css('left', ((wWidth - layer2Width) / 2));
-					}
-					layer2.plaxify({
-						"xRange":layer2offset,
-						"yRange":layer2offset
-					});
-					$.plax.enable();
-				}
-				else {
-					$('body').css('background-image', '');
-					$('.page').css('background-image', '');
-				}
-			}
-			$(document).ready(function () {
-				$(window).resize(function() {
-					setupPlax();
-				});
-				setupPlax();
-			});
-		</script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mu Fury - Full Mu Online Season 4 Private Server</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<section class="page">
+    <div class="page__plax-shell visible-md-block visible-lg-block">
+        <div class="page__plax-layer page__plax-layer_type1"></div>
+        <div class="page__plax-layer page__plax-layer_type2"></div>
+    </div>
+    <header class="page__header">
+        <div class="container">
+            <nav class="main-menu" role="navigation">
+                <div class="main-menu__inner main-menu__inner_type1 visible-md-block visible-lg-block">
+                    <ul class="main-menu__col main-menu__col_left"><li class="main-menu__item main-menu__item_type-1"><a href="#"><span class="label sr-only">Home</span></a></li><li class="main-menu__item main-menu__item_type-2"><a href="#"><span class="label sr-only">Register</span></a></li></ul>
+                    <div class="main-menu__col main-menu__col_mid"><a href="/" class="main-menu__logo" title="MU Fury Season 4"><span class="label sr-only">MU Fury Season 4</span></a></div>
+                    <ul class="main-menu__col main-menu__col_right"><li class="main-menu__item main-menu__item_type-3"><a href="#"><span class="label sr-only">Downloads</span></a></li><li class="main-menu__item main-menu__item_type-4"><a href="#"><span class="label sr-only">Forum</span></a></li></ul>
+                </div>
+                <div class="main-menu__inner main-menu__inner_type2 visible-xs-block visible-sm-block">
+                    <div class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">MU Fury Season 4</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                                    <li><a href="#" >Register</a></li>
+                                    <li><a href="#">Downloads</a></li>
+                                    <li><a href="#">Forum</a></li>
+                                </ul>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <h1 class="sr-only">Home</h1>
+    </header>
+    <main class="page__main">
+        <div class="container">
+            <div class="row">
+            <div class="page__content-wrapper">
+	            
+                <div class="fcol-md-3">
+                    <section class="widget widget_server-status">
+	                    <div class="widget widget_server-status-background">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-4">
+                        <div class="status__display status__display_online"></div>
+                                </div>
+	                            <div class="col-xs-8">
+                        <div class="status__text">
+                            <h2>SERVER STATUS<span class="sr-only">: On</span></h2>
+                            <p>PLAYERS ONLINE: 200</p>
+                        </div>
+                            </div>
+                            </div>
+                        </div>
+	                    </div>
+                    </section>
+                    <section class="sub-menu-block sub-menu-block_type1">
+                        <section class="widget widget_navigation">
+
+                            <div class="widget__inner" >
+	                            <div class="clearfix">
+                                <h2>NAVIGATION</h2>
+		                            <div class="widget_navigation-line"></div>
+                                <ul class="nav ">
+                                    <li role="presentation" class="active"><a href="#">NEWS</a></li>
+                                    <li role="presentation"><a href="#" >WEBSHOP</a></li>
+                                    <li role="presentation"><a href="#" >MARKET</a></li>
+                                    <li role="presentation"><a href="#" >GALLERY</a></li>
+                                    <li role="presentation"><a href="#"  >STATISTICS</a></li>
+                                    <li role="presentation"><a href="#"  >GAME MASTERS</a></li>
+                                    <li role="presentation"><a href="#" >BLACKLIST</a></li>
+                                    <li role="presentation"><a href="#" >RANKINGS</a></li>
+                                    <li role="presentation"><a href="#" >MU GUIDES</a></li>
+                                </ul>
+	                            </div>
+                            </div>
+                        </section>
+                        <section class="widget widget_top">
+                            <div class="widget__inner">
+	                            <div class="widget_top">
+                                <h2>TOP PLAYERS</h2>
+	                            <div class="widget_top-line"></div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary"><h3 class="sr-only">VIEW ALL</h3></button>
+                            </div>
+                            </div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+                <div class="fcol-md-6">
+                    <section class="widget widget_hero-btn">
+                        <a href="#"><span class="btn btn-link"></span></a>
+                        </section>
+                    <section class="widget widget_news">
+                        <div class="widget__inner">
+                            <h2>LATEST NEWS</h2>
+                        </div>
+	                    <!--<div class="container">-->
+	                    <div class="widget_news-line"></div>
+                        <section class="widget widget_news_type-1">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4">
+
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <h2>LOREUM IPSUM DOLOR SIT AMET</h2>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+
+                            <!--<p>Vēlos visiem atgādināt, ja izmantojat līdzīgas paroles saviem kontiem arī citos Mu serveros, nomainiet tās, jo svešos serveros varbūt negodīgi GM, kas var apskatīties Jūsu paroles tajos serveros un tad mēģināt pielasīt šajos un tad apzagt Jūsu kontus.
+
+                                Runājot par mantu iedošanu, pārnešanu vai kādu citu darbību, kuras rezultātā manta jāiedod 3.personai.
+
+                                Nedodiet mantas cilvēkiem, kurus zinat, ja Jums rūp savas mantas, iesaistiet GM darījumā, tas, ka GM nav online bijis uz to brīdi nav tik dārgs zaudējums kā vesels 2lvl FS FO sets, tuvākajā laikā tiks Market uzlabots, lai atpoguļotu Socket opcijas, tad varēs droši izmantot to un nevajadzēs uztraukties par krāpniekiem.
+
+                                Neaizmirstam, ka Jūsu naivuma dēļ zaudētās mantas netiek atgriestas, Jums pašiem jāuzņemas atbildība par tām.</p>-->
+
+	                                </div>
+                                    <div class="widget_news_footer-1">
+                                <footer class="page__footer_type-1">
+                                <div class="container-fluid">
+                                    <p>Posted on 5 December, 2013</p>
+                                </div>
+                                </footer>
+                            </div>
+                            </div>
+
+                        </section>
+                        <section class="widget widget_news_type-2">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4">
+
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <h2>LOREUM IPSUM DOLOR SIT AMET</h2>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <!--<p>Vēlos visiem atgādināt, ja izmantojat līdzīgas paroles saviem kontiem arī citos Mu serveros, nomainiet tās, jo svešos serveros varbūt negodīgi GM, kas var apskatīties Jūsu paroles tajos serveros un tad mēģināt pielasīt šajos un tad apzagt Jūsu kontus.
+
+                                        Runājot par mantu iedošanu, pārnešanu vai kādu citu darbību, kuras rezultātā manta jāiedod 3.personai.
+
+                                        Nedodiet mantas cilvēkiem, kurus zinat, ja Jums rūp savas mantas, iesaistiet GM darījumā, tas, ka GM nav online bijis uz to brīdi nav tik dārgs zaudējums kā vesels 2lvl FS FO sets, tuvākajā laikā tiks Market uzlabots, lai atpoguļotu Socket opcijas, tad varēs droši izmantot to un nevajadzēs uztraukties par krāpniekiem.
+
+                                        Neaizmirstam, ka Jūsu naivuma dēļ zaudētās mantas netiek atgriestas, Jums pašiem jāuzņemas atbildība par tām.</p>-->
+                                </div>
+                                <div class="widget_news_footer-1">
+                                    <footer class="page__footer_type-1">
+                                        <div class="container-fluid">
+                                            <p>Posted on 5 December, 2013</p>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="widget widget_news_type-3">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4">
+
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <h2>LOREUM IPSUM DOLOR SIT AMET</h2>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <!--<p>Vēlos visiem atgādināt, ja izmantojat līdzīgas paroles saviem kontiem arī citos Mu serveros, nomainiet tās, jo svešos serveros varbūt negodīgi GM, kas var apskatīties Jūsu paroles tajos serveros un tad mēģināt pielasīt šajos un tad apzagt Jūsu kontus.
+
+                                        Runājot par mantu iedošanu, pārnešanu vai kādu citu darbību, kuras rezultātā manta jāiedod 3.personai.
+
+                                        Nedodiet mantas cilvēkiem, kurus zinat, ja Jums rūp savas mantas, iesaistiet GM darījumā, tas, ka GM nav online bijis uz to brīdi nav tik dārgs zaudējums kā vesels 2lvl FS FO sets, tuvākajā laikā tiks Market uzlabots, lai atpoguļotu Socket opcijas, tad varēs droši izmantot to un nevajadzēs uztraukties par krāpniekiem.
+
+                                        Neaizmirstam, ka Jūsu naivuma dēļ zaudētās mantas netiek atgriestas, Jums pašiem jāuzņemas atbildība par tām.</p>-->
+                                </div>
+                                <div class="widget_news_footer-1">
+                                    <footer class="page__footer_type-1">
+                                        <div class="container-fluid">
+                                            <p>Posted on 5 December, 2013</p>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="widget widget_news_type-4">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4">
+
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <h2>LOREUM IPSUM DOLOR SIT AMET</h2>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                   <!-- <p>Vēlos visiem atgādināt, ja izmantojat līdzīgas paroles saviem kontiem arī citos Mu serveros, nomainiet tās, jo svešos serveros varbūt negodīgi GM, kas var apskatīties Jūsu paroles tajos serveros un tad mēģināt pielasīt šajos un tad apzagt Jūsu kontus.
+
+                                        Runājot par mantu iedošanu, pārnešanu vai kādu citu darbību, kuras rezultātā manta jāiedod 3.personai.
+
+                                        Nedodiet mantas cilvēkiem, kurus zinat, ja Jums rūp savas mantas, iesaistiet GM darījumā, tas, ka GM nav online bijis uz to brīdi nav tik dārgs zaudējums kā vesels 2lvl FS FO sets, tuvākajā laikā tiks Market uzlabots, lai atpoguļotu Socket opcijas, tad varēs droši izmantot to un nevajadzēs uztraukties par krāpniekiem.
+
+                                        Neaizmirstam, ka Jūsu naivuma dēļ zaudētās mantas netiek atgriestas, Jums pašiem jāuzņemas atbildība par tām.</p>-->
+                                </div>
+                                <div class="widget_news_footer-1">
+                                    <footer class="page__footer_type-1">
+                                        <div class="container-fluid">
+                                            <p>Posted on 5 December, 2013</p>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </div>
+                        </section>
+                        <nav>
+                            <div class="pager">
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            </div>
+                        </nav>
+	                   <!-- </div>-->
+                    </section>
+                    <section class="page__main-deco-footer">
+                        <div class="deco-footer">
+
+                        </div>
+                    </section>
+                </div>
+                <div class="fcol-md-3">
+                    <section class="widget widget_community">
+	                    <div class="widget__inner">
+	                    <div class="widget_community-background">
+
+	                        <div class="container">
+		                        <div class="col-md-12">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary_type-1"></button>
+                                <button type="button" class="btn btn-primary_type-2"></button>
+                                <button type="button" class="btn btn-primary_type-3"></button>
+                                <button type="button" class="btn btn-primary_type-4"></button>
+                            </div>
+		                        </div>
+	                        </div>
+	                        </div>
+                            <h2 class="sr-only">Community</h2>
+                        </div>
+                    </section>
+                    <section class="sub-menu-block sub-menu-block_type2">
+                        <section class="widget widget_members">
+
+                            <div class="widget__inner">
+	                            <div class="container-fluid">
+                                <h2>MEMBER AREA</h2>
+		                            <div class="widget_members-line"></div>
+                                <form class="navbar-form " role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control col-sm" placeholder="Login">
+                                         </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control col-sm" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn-default"></button>
+                                    </div>
+                                   <div class="sub_head_type1">
+                                    <h6>LOST YOUR PASSWORD?</h6>
+                                    <div class="media">
+                                    <h6 class="media-heading pull-left">NOT A MEMBER?</h6><h6 class="media-heading pull-left"><a href="#"><span class=""></span>SIGN UP!</a></h6>
+                                    </div>
+                                   </div>
+                                </form>
+	                            </div>
+                            </div>
+
+                        </section>
+                        <section class="widget widget_forum-posts">
+                            <div class="widget__inner">
+                                <h2>LATEST FORUM POSTS</h2>
+	                            <div class="widget_forum-posts-line"></div>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+
+            </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="fcol-md-3"></div>
+                <div class="fcol-md-6">
+        <div class="page__main-deco-footer"></div>
+                </div>
+                <div class="fcol-md-3"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="page__footer">
+        <div class="container">
+            <div class="text-footer">MU Fury Season 4 &copy; 2015, Aigars R.<br />DESIGN BY ANNA LIEPINA</div>
+        </div>
+    </footer>
+</section>
+<script src="/vendor/jquery/dist/jquery.js"></script>
+<script src="/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/vendor/plax/js/plax.js"></script>
+<script>
+    function setupPlax() {
+        var plaxShell = $('.page__plax-shell');
+        if (!plaxShell.is(':hidden')) {
+            var layer1offset = 20,
+                    layer1 = plaxShell.find('.page__plax-layer_type1'),
+                    layer2offset = 60,
+                    layer2 = plaxShell.find('.page__plax-layer_type2'),
+                    wWidth = $(window).width(),
+                    wHeight = $(window).height();
+            $('body').css('background-image', 'none');
+            $('.page').css('background-image', 'none');
+            layer1.attr('style', '');
+            layer1.show();
+            layer1.css({
+                "left": 0 - layer1offset,
+                "width": wWidth + layer1offset,
+                "top": 0 - layer1offset,
+                "height": wHeight + layer1offset
+            });
+            layer1.plaxify({
+                "xRange":layer1offset,
+                "yRange":layer1offset
+            });
+            layer2.attr('style', '');
+            layer2.show();
+            var layer2Width = layer2.width();
+            if (layer2Width > wWidth) {
+                layer2.css('left', 0 - ((layer2Width - wWidth) / 2));
+            }
+            else {
+                layer2.css('left', ((wWidth - layer2Width) / 2));
+            }
+            layer2.plaxify({
+                "xRange":layer2offset,
+                "yRange":layer2offset
+            });
+            $.plax.enable();
+        }
+        else {
+            $('body').css('background-image', '');
+            $('.page').css('background-image', '');
+        }
+    }
+    $(document).ready(function () {
+        $(window).resize(function() {
+            setupPlax();
+        });
+        setupPlax();
+    });
+
+</script>
+
+</body>
 </html>
