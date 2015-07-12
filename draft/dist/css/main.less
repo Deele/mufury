@@ -202,15 +202,16 @@ body {
 					font-family: serif;
 					line-height: 14px;
 					font-weight: 900;
-					text-shadow: 2px 1px black;
+					text-shadow: 1px 1px black;
 					margin-bottom: 16px;
 				}
 				p{
 					margin-left: 14px;
 					margin-top: -10px;
 					font-family: serif;
+					letter-spacing: 0.6px;
 					font-size: 10px;
-					text-shadow: 0 2px black;
+					text-shadow: 1px 1px black;
 				}
 				color: #ffffff;
 				width: 150px;
@@ -230,78 +231,68 @@ body {
 			margin-top: -8px;
 			background-size: contain;
 		}
-
-
-
+		&-backline{
+			background: url(/img/left-line.png) no-repeat;
+			height: 1px;
+			width: 171px;
+			box-shadow: -1px 0.6px 0.1px 0.2px #237FBE;
+			opacity: 0.3;
+		}
 		h2{
-
 			font-size: 18px;
 			margin-left: -78px;
 		}
-		.nav>li>a {
-			padding-left: 10px;
-			margin-left: 22px;
-			color: #ffffff;
-			font-family: serif;
-			display: inline-block;
-			background-color: transparent;
+		.nav{
+			line-height:2px ;
+			li {
+				a {
+					padding-left: 10px;
+					margin-left: 22px;
+					color: #ffffff;
+					font-family: serif;
+					font-size: 11px;
+					letter-spacing: 0.4px;
+					display: inline-block;
+					background-color: transparent;
+					&:active {
+						a,
+						.before {
+							display: inline-block;
+						}
+						&:before {
+							content: url('/img/diamond-s.png');
+							margin-left: -27px;
+							margin-top: -8px;
+							//float: left;
+							position: absolute;
+						}
+					}
+					&:hover{
+						a,
+						.before {
+							display: inline-block;
+						}
+						&:before {
+							content: url('/img/diamond-s.png');
+							margin-left: -27px;
+							margin-top: -8px;
+							//float: left;
+							position: absolute;
+						}
+					}
+				}
+			}
 		}
 		 ul.nav {
-			 margin-top: 5px;
+			 margin-top: 8px;
 			 margin-left: 10px;
 			 display: inline-block;
-			 &:active{
-				 display: inline-block;
-				 a:before{
-					 display: inline-block;
-					 content: url('/img/diamond-s.png')  ;
-
-					// margin-left: -10px;
-					 margin-top: 0;
-
-				 }
-				 color: #ffff00;
-			 }
-			 &:hover {
-				 li:hover{
-					 .before,
-					 li{
-						 display: inline-block;
-					 }
-					 //height: 23px;
-					 &:before{
-					 content: url('/img/diamond-s.png') ;
-						 margin-left:5px;
-						 margin-top: 2px;
-						 //float: left;
-						 position: absolute;
-
-						  }
-				 }
-				 color: #ff0000;
-			 }
 		 }
-
-		.nav{
-			//width: 188px;
-			&:active{
-				background-color: inherit;
-			}
-			line-height:4px ;
-			.active{
-
-			}
-
-
-		}
-
-
 		color: #ffffff;
 	}
 	&_top
 	{
 		width: 265px;
-
 		color: #ffffff;
 		&-line{
 			background: url('/img/top-l.png')no-repeat 82px 0;
@@ -311,7 +302,7 @@ body {
 		}
 		.btn-primary{
 			text-decoration: none;
-			background:url(/img/view.jpg)no-repeat 0 -1px ;
+			background:url(/img/viewall2.png)no-repeat 0 -1px ;
 			//background-size: cover;
 			height: 33px;
 			width: 90px;
@@ -401,8 +392,6 @@ body {
 				width:416px ;
 			}
 		}
-
-
 		&_footer-1,
 		&_footer-2,
 		&_footer-3,
