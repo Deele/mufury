@@ -362,12 +362,13 @@ body {
 			box-shadow: 0 0 1px 1px #000011;
 			border: none;
 			&:hover {
-
+				box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
 			}
 			&:focus {
-
+				box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
 			}
 			&:active {
+				box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
 				background: url(/img/viewalln1.png) no-repeat 0 -1px;
 				background-size: cover;
 			}
@@ -435,7 +436,7 @@ body {
 	&_news {
 		background-size: contain;
 		background: url('/img/center-background_pattern.png') repeat-y 0 0;
-		height: 768px;
+		height: auto;
 		width: 438px;
 		color: #ffffff;
 		&-all {
@@ -480,7 +481,7 @@ body {
 		&_type-2,
 		&_type-3,
 		&_type-4 {
-			height: 182px;
+			height: auto;
 			width: 404px;
 			margin-left: 15px;
 			word-wrap: break-word;
@@ -494,8 +495,9 @@ body {
 			p {
 				overflow: hidden;
 				width: inherit;
-				height: 98px;
+				height: auto;
 				margin-bottom: 10px;
+				margin-top: 2px;
 				font-size: 12px;
 				font-family: sans-serif;
 			}
@@ -518,7 +520,7 @@ body {
 			}
 			.text {
 				overflow: hidden;
-				height: 122px;
+				height: auto;
 				width: 375px;
 				position: relative;
 				border-bottom: 2px solid #1A1977;
@@ -527,18 +529,19 @@ body {
 				&-control {
 
 					margin-top: 5px;
-					height: 103px;
+					height: auto;
 					width: 100%;
 					overflow-wrap: break-word;
 					overflow: hidden;
 
 					&-more
-						{&-1,
+						{
+						&-1,
 						&-2,
 						&-3,
 						&-4{
 						margin-left: 310px;
-						margin-top: -12px;
+						margin-top: -20px;
 						position: absolute;
 							&-link {
 								&-1,
@@ -607,24 +610,57 @@ body {
 					background-position: -20px -25px;
 					&:hover {
 						background-position: -20px -310px;
+						box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+
+					}
+					&:active{
+						box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+
+					}
+					&:focus{
+
 					}
 				}
 				&_type-2 {
 					background-position: -80px -25px;
 					&:hover {
 						background-position: -80px -310px;
+						box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+					}
+					&:active{
+						box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+
+					}
+					&:focus{
+
 					}
 				}
 				&_type-3 {
 					background-position: -140px -25px;
 					&:hover {
-						background-position: -140px -310px
+						background-position: -140px -310px;
+					box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+					}
+					&:active{
+						box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+
+					}
+					&:focus{
+
 					}
 				}
 				&_type-4 {
 					background-position: -200px -25px;
 					&:hover {
 						background-position: -200px -310px;
+						box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+					}
+					&:active{
+						box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+
+					}
+					&:focus{
+
 					}
 				}
 			}
@@ -684,12 +720,14 @@ body {
 				margin-top: 6px;
 				box-shadow: 0 0 1px 1px #000011;
 				&:hover {
+					box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
 				}
 				&:focus {
+					box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
 				}
 				&:active {
-					background: url(/img/loginn1.png)no-repeat -1px -2px;
-					background-size: cover;
+					box-shadow: 0 0 10px #fff,0 0 5px #fff,0 0 22px #fff,0 0 1px #0ff,0 0 2px #0ff,0 0 30px #0ff,0 0 1px #0ff;
+
 				}
 			}
 			::-webkit-input-placeholder {
