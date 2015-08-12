@@ -1,18 +1,7 @@
 ## Setup
 
-First, from the Terminal (assuming Node.js installed), Less to use CSS pre-processor and bower to deal with dependency management.
+This project development can be done using vagrant and its configuration contains automated setup procedure.
 
-    npm install -g less bower
-
-Let's now install the dependencies for this project.
-
-    bower install
-
-To be able to build the project CSS, run:
-
-    chmod +x build_less.sh
-
-### Build
-
-When ready to build the project CSS, run:
-    build/build_less.sh
+1. Install Vagrant
+2. From CLI interface, go to directory `cd draft` and launch VM using `vagrant up` command
+3. Follow instructions on screen to open page in browser or connect to VM through ssh
